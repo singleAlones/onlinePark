@@ -1,0 +1,28 @@
+ <image src="../../images/1.jpg"></image>
+ <view class="content">
+    <view class="title">
+        零售
+    </view>
+    <view class="text">面相什么服务行业</view>
+ </view>
+ <view class="content">
+    <view class="title">案例分析</view>
+    <view>
+    </view>
+ </view>
+ <view class="into" >
+      <view bindtap="clicks">
+         添加微信咨询 
+      </view>      
+      <van-dialog  id="van-dialog"
+        use-slot
+        show="{{ show }}"
+        show-cancel-button  
+        bind:close="onClose" 
+      >
+        <image src="../../images/find/code2.jpg"  class="img"/>
+      </van-dialog>
+ </view>
+ 
+    
+      

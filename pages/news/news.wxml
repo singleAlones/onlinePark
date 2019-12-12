@@ -1,0 +1,17 @@
+<view class="bg">
+  <view class="top"  >
+      <image src="{{baseUrl}}{{img[0].niimg}}" wx:if="{{img[0].niimg}}"></image>
+  </view>
+
+  <view class="news">
+      <van-icon name="comment-o" />
+      <h3>领导视察</h3>  
+  </view>
+  <view class="new">
+      <view wx:for="{{news}}" wx:key="index" bindtap="jump" data-id="{{index}}" >
+            <van-image   width="4rem"  height="4rem" fit="cover" src="{{baseUrl}}{{item.nimg}}"/>       
+            <view>{{item.ncontent}}</view>
+            <van-icon name="arrow" />  
+      </view>
+  </view>
+</view> 

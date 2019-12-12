@@ -1,0 +1,29 @@
+/* pages/company/company.wxss */
+page{
+  background:#F1F1F1;
+}
+.content{
+   display: flex;
+   justify-content: center;
+}
+.content>view{
+  background: #fff;
+  width: 95%;
+  border-radius: 20rpx;
+  margin-top: 200rpx;
+}
+.text{
+  text-indent: 2em;
+  font-size: 26rpx;
+  font-family:"Microsoft YaHei";
+  margin-top: 15rpx;
+  margin-bottom: 30rpx;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-top:50rpx;
+  margin-bottom: 20rpx;
+}

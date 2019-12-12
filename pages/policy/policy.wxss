@@ -1,0 +1,30 @@
+/* pages/policy/policy.wxss */
+page{
+   background:#F1F1F1;
+}
+
+.img{
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.policy{
+   
+  width: 90%;
+  margin: 0 auto;
+   background: #fff;
+   padding: 40rpx;
+   border-radius: 20rpx;
+   box-sizing: border-box;
+}
+.text{
+  text-indent: 2em;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+.center{
+  margin-top:20rpx;
+  display: flex;
+  justify-content: center;
+  font-size:28rpx;
+  font-weight: bold;
+}

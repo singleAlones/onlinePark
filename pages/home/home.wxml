@@ -1,0 +1,91 @@
+ <view class="top">
+      
+      <image src="../../images/index.png" bindtap="jump0"></image>
+      
+      <image src="../../images/into.png" bindtap="jumps"></image>
+      
+ </view>
+ <!-- 轮播 -->
+ <swiper class="posts-swiper" indicator-dots="true" autoplay="true" interval="5000" >
+  <swiper-item wx:for="{{img}}" wx:key="index" bindtap="jump"  data-id="{{index}}">
+    <image class="posts-swiper-img" src="{{baseUrl}}{{item.iimg}}"></image> 
+  </swiper-item>
+</swiper> 
+ 
+  
+
+<!-- 新闻 -->
+
+<!-- link 模式，在右侧显示链接箭头 -->
+<van-notice-bar   left-icon="volume-o"   backgroundColor="#ECF9FF" color="#1989FA"
+  text="服务于全国中、小型企业落地服务，入驻请联系我们:  15353837992 "
+/>
+<!-- tabbar -->
+ 
+ 
+ <view class="tabbars">
+   <view bindtap="jump1">
+       <image src="../../images/tabbar/introduce.png"></image> 
+        <view>园区简介</view>
+    </view>
+     <view bindtap="jump2">
+         <image src="../../images/tabbar/policy.png"></image>  
+        <view>产业扶持</view>
+    </view>
+   <view bindtap="jump3">
+         <image src="../../images/tabbar/garden.png"></image> 
+        <view>我要入园</view>
+    </view>
+   
+    <view bindtap="jump4">
+        <image src="../../images/tabbar/company.png"></image>  
+        <view>一键入驻</view>
+    </view>
+  
+  
+ </view>
+ <!-- 精选服务 -->
+ 
+  <view class="content">
+    <image src="../../images/service.png"></image>
+ 
+  </view>
+  <view  class="service"> 
+        <view>
+          <image src="../../images/service/1.png"></image>
+          <view>零售</view>
+        </view>
+        <view>
+          <image src="../../images/service/2.png"></image>
+            <view>社交电商</view>
+        </view>
+        <view>
+          <image src="../../images/service/3.png"></image>
+            <view>直播电商</view>
+        </view>
+        <view>
+          <image src="../../images/service/4.png"></image>
+          <view>B2B电商</view>
+        </view>
+  </view>
+    <view  class="service"> 
+        <view>
+          <image src="../../images/service/5.png"></image>
+          <view>消费品</view>
+        </view>
+        <view>
+          <image src="../../images/service/6.png"></image>
+            <view>工业化工</view>
+        </view>
+        <view>
+          <image src="../../images/service/7.png"></image>
+            <view>物流仓储</view>
+        </view>
+        <view>
+          <image src="../../images/service/8.png"></image>
+          <view>现代服务</view>
+        </view>
+  </view>
+
+ 
+ 

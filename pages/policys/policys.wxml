@@ -1,0 +1,17 @@
+<!--pages/policy/policy.wxml-->
+ 
+ <view class="news">
+      <van-icon name="comment-o" />
+      <h3>政策扶持</h3>  
+  </view >
+    <view wx:for="{{img}}" wx:key="index" class="policy" bindtap="jump" data-id="{{index}}" >  
+       <view class="bg">
+         <image src="{{baseUrl}}{{item.poImg}}"></image>    
+        <view>{{item.poName}}</view>
+        </view>
+    </view>
+  
+    
+   
+
+   

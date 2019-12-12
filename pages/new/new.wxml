@@ -1,0 +1,19 @@
+<view class="new">
+ <view class="news">
+   <van-icon name="comment-o" />
+   <h3>详情</h3>
+  </view>
+  <view  wx:for="{{news}}" wx:key="index" >
+        <view class="img">
+          <image src="{{baseUrl}}{{item.ncimg}}"  mode="aspectFit"></image> 
+        </view>
+        <view class="content">
+          <view>
+              <h4>{{item.ncontent}}</h4>      
+              <view >
+                  {{item.nccontent}}
+              </view>
+            </view>
+        </view>
+  </view>
+</view>

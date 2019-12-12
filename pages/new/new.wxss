@@ -1,0 +1,56 @@
+page{
+  background:#F1F1F1;
+} 
+
+ .new{
+   width:90%;
+    margin:40rpx auto;
+    background: #F9F9F9;
+    border:1px solid #fff;
+    border-radius: 30rpx;
+ }
+ .new view{
+    margin: 0 atuo
+ }
+ .news{
+  font-size:40rpx;
+  margin-top:38rpx;
+  margin-bottom: 38rpx;
+  display: flex;
+  justify-content: center;
+  color:#7775C9;
+}
+van-icon{
+  margin-right: 20rpx;
+}
+ 
+ .new image{
+    border-radius: 30rpx;
+ }
+ .img{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+     
+ }
+ .img image{
+   width:95%;
+ }
+ .new h4{
+    font-size: 28rpx;
+    font-weight: bold;
+ }
+  .content view:nth-child(2){
+   margin-top: 20rpx;
+   font-size: 26rpx;
+   text-indent: 2em;
+   margin-bottom: 40rpx;
+ }
+ .content {
+   display: flex;
+   justify-content: center;
+ }
+ .content>view{
+   width: 80%;
+   margin-bottom:100rpx;
+ }

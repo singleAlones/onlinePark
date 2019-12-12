@@ -1,0 +1,31 @@
+/* pages/merit/merit.wxss */
+page{
+  background:#F1F1F1;
+} 
+.bg{
+  background: #fff;
+  width: 90%;
+  margin:30rpx auto;
+  border-radius: 20rpx;
+   padding-bottom: 20rpx;
+  }
+  .title{
+    text-align: center;
+    padding-top: 30rpx;
+    box-sizing: border-box;
+    font-size: 40rpx;
+    font-weight: bold;
+  }
+  .bg>view{
+    width: 95%;
+    margin: 30rpx auto;
+  }
+  .name{
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+  }
+  .content{
+    font-size: 26rpx;
+
+  }

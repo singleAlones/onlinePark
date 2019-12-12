@@ -1,0 +1,46 @@
+ 
+<image src="{{baseUrl}}{{img}}" wx:if="{{img}}" class="big"></image>
+<view class="concat">
+     <view class="our">联系我们</view>
+     <view class="line"></view>
+     <view>
+        <view class="content">
+             <image src="../../images/aboutUs/company.png"></image>
+             <view>铜川市耀州区大数据产业园</view>
+        </view>
+        <view class="content">
+            <image src="../../images/aboutUs/phone.png"></image>
+            <view>0919-2861222</view>
+        </view>
+        <view class="content">
+             <image src="../../images/aboutUs/e-mail.png"></image>
+             <view>bd@centurywealth.vip</view>
+        </view>
+        <view class="content">
+             <image src="../../images/aboutUs/address.png"></image>
+             <view>铜川市耀州区锦阳新城</view>
+        </view>
+     </view>
+</view>
+<view class="concat">
+    <view class="our">加微信进一步沟通</view>
+    <view  class="qrcode">扫描二维码识别</view>
+      <view class="code into">
+             <view >
+                 <view class="into">
+                     <image src="../../images/find/code1.jpg"></image>
+                 </view>
+                 <view class="into fonts">
+                     微信公众号
+                 </view>
+              </view>
+                 <view>
+                     <view class="into">
+                       <image src="../../images/find/code2.jpg"></image>
+                      </view>
+                      <view class="into fonts">
+                          客服微信
+                      </view>
+                 </view>
+             </view>
+</view>

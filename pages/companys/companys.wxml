@@ -1,0 +1,16 @@
+<!--pages/companys/companys.wxml-->
+ <view class="into">
+    <view>企业展示</view> 
+</view>
+<view class="companys">
+<view wx:for="{{companys}}" wx:key="index" bindtap="jump" data-id="{{index}}">
+  <view class="img">
+      <image src="{{baseUrl}}{{item.comimg}}"></image>
+  </view>
+  <view class="text">
+       {{item.comName}}
+  </view> 
+</view>
+</view>
+ 
+ 

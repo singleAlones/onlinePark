@@ -1,0 +1,43 @@
+/* pages/news/news.wxss */
+page{
+  background:#F1F1F1;
+} 
+  
+.top image{
+  width: 100%;
+  height:420rpx;
+   
+}
+.news{
+  font-size: 38rpx;
+  margin-top:38rpx;
+  margin-bottom: 38rpx;
+  display: flex;
+  justify-content: center;
+  color:#7775C9;
+}
+van-icon{
+  margin-right: 20rpx;
+}
+/* 新闻列表 */
+ 
+ .new>view{
+   display: flex;
+   width: 90%;
+  margin:20rpx auto;
+  align-items: center;
+  background: #fff;
+  border-radius:30rpx;
+  padding:15rpx;
+  
+ }
+ .new>view view{
+   margin-left: 30rpx;
+   font-size: 24rpx;
+ }
+ .new>view   image{
+    
+   width: 100%;
+   border-radius: 20rpx;
+   
+ }

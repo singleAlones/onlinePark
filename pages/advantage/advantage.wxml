@@ -1,0 +1,6 @@
+<!--pages/advantage/advantage.wxml-->
+
+<view wx:for="{{advantage}}" wx:key="index" class='content'>
+     <view class="title">{{item.adName}}</view>
+     <view class="text">{{item.adcontent}}</view>
+</view>

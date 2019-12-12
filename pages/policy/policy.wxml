@@ -1,0 +1,16 @@
+<!--pages/policy/policy.wxml-->
+  <image src="{{baseUrl}}{{img}}" class="img"></image>
+<view class="policy">
+
+  <view class="text">
+        耀州区大数据产业园是贯彻落实十九大精神、落实"五新"战略决策、发展"三个经济"的重要部署，是
+        推进耀州区经济结构转型的重大工程。为了支持落户产业园企业发展壮大，结合《耀州区关于加快商贸服务
+        业发展的实施意见》（铜耀子[2017]84号）和《耀州区关于加强财源建设的意见》（铜耀政发[2016]10号），
+        现就促进大数据产业园入园企业发展提出以下优惠政策:
+  </view>
+  <view >
+      <view class="center">{{policys[0].pocName}}</view>
+      <view class="text">{{policys[0].poc1}}</view>
+      <view class="text">{{policys[0].poc2}}</view>
+  </view>
+</view>

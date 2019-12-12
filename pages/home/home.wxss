@@ -1,0 +1,133 @@
+/* pages/home/home.wxss */
+.top{
+  
+  display: flex;
+  justify-content: space-between;
+  padding:16rpx;
+  box-sizing: border-box;
+  background: #ECF9FF;
+  
+}
+.top image{
+  width:50rpx;
+  height: 50rpx;
+}
+.img{
+  width:100rpx !important;
+  
+}
+view{
+   font-family: "Microsoft YaHei";
+ }
+.post-swiper{
+  width: 100%;
+  height: 500rpx;
+
+}
+ .posts-swiper-img{
+   width:100%;
+   height: 100%;
+ }
+
+  /* tabbar */
+  .tabbars{
+    display: flex;
+    margin-top:50rpx;
+    margin-bottom: 30rpx;
+    justify-content: center;
+     color:#24262A;
+     font-size: 26rpx;
+  }
+  .tabbars>view{
+    width:25%;
+   text-align: center;
+  }
+  .tabbars image{
+    width:100rpx;
+    height: 100rpx;
+  }
+  .tabbars view view{
+    margin-top: 15rpx;
+  }
+ .content {
+   margin-top:40rpx;
+   margin-bottom:30rpx;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   
+ }
+  
+ 
+ .content image{
+   width:95%;
+   height: 160rpx;
+  margin-top: 20rpx;
+ }
+
+
+
+ /* service */
+ .service{
+   display: flex;
+   margin-bottom:10rpx;
+ }
+ .service>view {
+   text-align: center;
+   width:25%;
+   margin-right: 10rpx;
+   background:#F9F9F9;
+   border-radius:10%;
+   padding-top:40rpx;
+   padding-bottom: 40rpx;
+   color:#24262A;
+   font-size:22rpx;
+ }
+ .service view image{
+   width:90rpx;
+   height:90rpx;
+ }
+ .service view view{
+   margin-top:20rpx; 
+ }
+
+   
+  .advantage van-tab{
+    font-size:28rpx;
+   color:#24262A;
+   margin-bottom: 20rpx;
+  }
+  .company{
+    margin-top:30rpx !important;
+    width:98%;
+   margin: 0 auto;
+  }
+ .company .productor{
+   margin-left:20rpx;
+   color:#24262A;
+   font-size:38rpx;
+  justify-content: center;
+  display: flex;
+ }
+ van-tab{
+   font-size:26rpx !important;
+   text-indent: 2em;
+   color:rgb(143, 130, 130);
+   margin-top:10rpx;
+   height: 140rpx;
+ }
+ 
+ .company .company1{
+   display: flex;
+  text-align: center;
+  margin-top:20rpx;
+  
+ }
+ .company1>view{
+   width:50%;
+   background:#E7F4FD;
+ }
+ .company1 view view{
+   margin: 20rpx auto;
+   color:rgb(92, 78, 78); 
+ }

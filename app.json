@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/home/home",
+    "pages/merit/merit",
+    "pages/companys/companys",
+    "pages/company/company",
+    "pages/introduces/introduces",
+    "pages/introduce/introduce",
+    "pages/advantage/advantage",
+    "pages/industry/industry",  
+    "pages/garden/garden",  
+    "pages/policys/policys",
+    "pages/policy/policy",
+    "pages/aboutUs/aboutUs", 
+    "pages/news/news", 
+    "pages/new/new"
+   ],
+     "window": {
+          "backgroundTextStyle": "light",
+          "navigationBarBackgroundColor": "#367BF0",
+          "navigationBarTitleText": "线上产业园",
+          "navigationBarTextStyle": "white"
+   },
+   "style": "v2",
+   "sitemapLocation": "sitemap.json",
+   "tabBar": {
+     "color":"#1F2121",
+     "selectedColor":"#3199F6",
+     "list": [
+       {
+       "pagePath": "pages/home/home",
+       "text": "首页",
+       "iconPath": "images/home.png",
+       "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "领导关怀",
+        "iconPath": "images/news0.png",
+        "selectedIconPath": "images/news1.png"
+      },
+       {
+         "pagePath": "pages/companys/companys",
+         "text": "企业风采",
+         "iconPath": "images/company0.png",
+         "selectedIconPath": "images/company1.png"
+       },
+        {
+          "pagePath": "pages/aboutUs/aboutUs",
+          "text": "联系我们",
+          "iconPath": "images/aboutUs0.png",
+          "selectedIconPath": "images/aboutUs1.png"
+        }
+     ]
+  }
+}

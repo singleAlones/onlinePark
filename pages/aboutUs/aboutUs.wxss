@@ -1,0 +1,66 @@
+/* pages/aboutUs/aboutUs.wxss */
+page{
+  background:#F1F1F1;
+}
+.big{
+  width: 100%;
+}
+.concat{
+  width:86%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding-left:50rpx;
+  padding-top:30rpx;
+  padding-bottom: 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.our{
+  font-weight: bold;  
+  font-size: 33rpx;
+  font-family:"Microsoft YaHei";
+  color:#353535;
+}
+.line{
+  margin-top: 20rpx;
+  border-bottom: 1px solid #E3E3E3;
+  width: 95%;
+}
+.content{
+  display: flex;
+  padding-top: 40rpx;
+  font-size: 26rpx;
+}
+.content view{
+  margin-left: 20rpx;
+}
+.content image{
+  width:35rpx;
+  height: 35rpx;
+}
+
+
+.qrcode{
+  color:#B4B4B4;
+  font-size: 26rpx;
+  margin-top: 15rpx;
+}
+.code>view{
+     width: 50%;
+   }
+ .code image{
+     width:65%;
+     height:190rpx;
+      
+   }
+  .code{
+     font-size: 26rpx;
+     color:rgb(153, 150, 150);
+     width: 90%;
+     margin: 0 auto;
+   }
+   .into{
+        display: flex;
+    justify-content: center;
+   }
+  

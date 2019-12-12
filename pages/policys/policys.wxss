@@ -1,0 +1,36 @@
+page{
+  background:#F1F1F1;
+} 
+.news{
+  font-size: 38rpx;
+  margin-top:38rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  color:#7775C9;
+  font-weight: bold;
+}
+.policy{
+   display: flex;
+   justify-content: center;
+   border-radius: 20rpx;
+   
+}
+.bg{
+ background: #fff;
+ width:90%;
+ text-align: center;
+ margin-bottom: 20rpx;
+ border-radius: 30rpx;
+ padding-bottom:30rpx;
+ font-weight: bold;
+ font-size: 28rpx;
+}
+.policy image{
+  opacity: 0.8;
+  width: 100%; 
+  height: 220rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  margin-bottom:30rpx;
+}

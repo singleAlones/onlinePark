@@ -1,0 +1,28 @@
+/* pages/advantage/advantage.wxss */
+page{
+  background:#F1F1F1;
+   font-family:"Microsoft YaHei";
+}
+.content{
+ background: #fff;
+  width: 90%;
+  margin:50rpx auto;
+  padding-top: 20rpx;
+   border-radius: 20rpx; 
+}
+.title{
+  text-indent: 2em;
+
+  font: 30rpx;
+ font-weight: bold;
+}
+.text{
+ text-indent: 2em;
+ 
+  font-size: 26rpx;
+ 
+  padding:20rpx;
+  box-sizing: border-box;
+ 
+ 
+}

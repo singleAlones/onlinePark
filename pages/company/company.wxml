@@ -1,0 +1,9 @@
+<!--pages/company/company.wxml-->
+<view wx:for="{{company}}" wx:key="index" class="content">
+  <view>
+      <view class="title">{{item.comcName}}</view>
+      <view class="text">
+          {{item.comccontent}}
+      </view>
+    </view>
+</view>

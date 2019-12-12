@@ -1,0 +1,45 @@
+/* pages/companys/companys.wxss */
+page{
+ 
+   font-family:"Microsoft YaHei";
+}
+.into{
+    font-size: 38rpx;
+  margin-top:38rpx;
+  margin-bottom: 38rpx;
+  display: flex;
+  justify-content: center;
+  color:#7775C9;
+  
+}
+.companys{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+.companys>view{
+  width: 45%;
+  border: 1px solid #f4f4f4;
+  background: #f4f4f4;
+  margin-bottom: 15rpx; 
+}
+.companys>view .img{
+   
+   text-align: center;
+  width: 100%;
+    height:190rpx;
+   
+}
+.img image{
+   width:200rpx;
+    height:190rpx;
+}
+.text{
+  text-align: center;
+  padding-bottom: 15rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #3F3F3F;
+ font-family:"Microsoft YaHei";
+ font-weight: bold;
+}

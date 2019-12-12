@@ -1,0 +1,18 @@
+<!--pages/introduce/introduce.wxml-->
+
+<view>
+ <image src="{{baseUrl}}{{img}}" wx:if="{{img}}"class="img"></image>
+     <view>
+         <view class="new">
+              <view wx:for="{{introduce}}" wx:key="index" bindtap="jump" data-id="{{index}}" >
+                    <van-image   width="4rem"  height="4rem" fit="cover" src="{{baseUrl}}{{item.inimg}}"  />  
+                    <view>    
+                        <view class="fonts">{{item.inName}}</view>
+                        <view>{{item.incontent}}</view>
+                    </view> 
+                    <van-icon name="arrow" />  
+              </view>
+               
+          </view>
+     </view>
+</view>

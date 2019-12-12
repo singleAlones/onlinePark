@@ -1,0 +1,8 @@
+<!--pages/introduce/introduce.wxml-->
+ 
+<view>
+      <image src= "{{baseUrl}}{{introduces.incimg}}"  wx-if="{{introduces.incimg}}"class="img"></image>
+      <view class="text">
+          {{introduces.inccontent}}
+      </view>
+</view>

@@ -1,0 +1,20 @@
+ 
+  <view class="bg"  >
+        <view class="into">
+            <text>
+            入驻资料填写
+            </text>
+        </view>
+       
+            <view class="into"> 
+              <input placeholder="请输入姓名" value="{{uname}}" name="uname" bindinput ="userNameInput"></input> 
+            </view>
+            <view class="into"> 
+              <input placeholder="请输入电话号码" value="{{uphone}}" name="uphone" bindinput ="userPhoneInput"></input>
+             </view>
+            <view class="into img" bindtap="reg"> 
+                <image src="../../images/find/button.png" ></image>
+            </view>
+           
+  </view>
+  

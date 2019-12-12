@@ -1,0 +1,27 @@
+<!--pages/merit/merit.wxml-->
+<view class="bg">
+    <view  class="title">
+        产业扶持
+    </view>
+    <view  wx:for="{{merit1}}" wx:key="index">
+          <view class="name">
+              {{item.mName}}
+          </view>
+          <view class="content">
+            {{item.mContent}}
+          </view>
+    </view>
+  </view>
+  <view class="bg">
+      <view class="title">
+          园区服务
+      </view>
+      <view  wx:for="{{merit2}}" wx:key="index">
+          <view class="name">
+              {{item.mName}}
+          </view>
+          <view class="content">
+              {{item.mContent}}
+          </view>
+      </view>
+    </view>
