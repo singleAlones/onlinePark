@@ -18,7 +18,7 @@
 
 <!-- link 模式，在右侧显示链接箭头 -->
 <van-notice-bar   left-icon="volume-o"   backgroundColor="#ECF9FF" color="#1989FA"
-  text="服务于全国中、小型企业落地服务，入驻请联系我们:  15353837992 "
+  text="100万电商企业加速成长服务热线电话:  15353837992  ，为您保驾护航"
 />
 <!-- tabbar -->
  
@@ -53,7 +53,7 @@
   <view  class="service"> 
         <view>
           <image src="../../images/service/1.png"></image>
-          <view>零售</view>
+          <view>零售电商</view>
         </view>
         <view>
           <image src="../../images/service/2.png"></image>

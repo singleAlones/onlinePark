@@ -1,5 +1,8 @@
  
+ 
+
   <view class="bg"  >
+     
         <view class="into">
             <text>
             入驻资料填写
@@ -15,6 +18,5 @@
             <view class="into img" bindtap="reg"> 
                 <image src="../../images/find/button.png" ></image>
             </view>
-           
+         <van-toast id="van-toast" />
   </view>
-  

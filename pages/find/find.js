@@ -1,5 +1,7 @@
 // pages/find/find.js
 const app = getApp();
+ 
+import Toast from '/vant-weapp/toast/toast';
 Page({
 
   /**
@@ -7,8 +9,8 @@ Page({
    */
   data: {
     img:'',
-    uname:'',
-    uphone:'',
+    hname:'',
+    hphone:'',
     baseUrl:'',
     pages:'',
     bg:"" 
@@ -19,26 +21,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      baseUrl: app.globalData.baseUrl ,
-      
+      baseUrl: app.globalData.baseUrl  
     })
-     
-
-
-   /* var self = this;
-    wx.request({
-      url: 'http://127.0.0.1:3000/indexs/order_img', //news img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        console.log(res.data);
-
-        self.setData({
-          img: res.data
-        })
-      }
-    })*/
   },
 
   /**
@@ -52,7 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+     
   },
 
   /**
@@ -91,17 +75,37 @@ Page({
   },
   userNameInput: function (e) {
     this.setData({
-     uname: e.detail.value
+     hname: e.detail.value
     })
   },
   userPhoneInput: function (e) {
     this.setData({
-      uphone: e.detail.value
+      hphone: e.detail.value
     })
   },
    reg:function(){
-      var uname=this.data.uname;
-      var uphone=this.data.uphone;
-      console.log(uname,uphone)
+      var hname=this.data.hname;
+      var hphone=this.data.hphone;
+      var that = this;
+      wx.request({
+        url: this.data.baseUrl + 'users/user?hname='+hname+"&&hphone="+hphone,
+        header: {
+          'content-type': 'application/json'
+        }, 
+        success(res) { 
+         
+             if(res.data.code==400){
+               Toast(res.data.msg);
+             }else if(res.data.code==305){
+               Toast(res.data.msg);
+             } else if (res.data.code == 301) {
+               Toast.fail(res.data.msg);
+             } else if (res.data.code==200){
+               Toast.success(res.data.msg);
+              
+             }
+        }
+      })
+    
    } 
 })

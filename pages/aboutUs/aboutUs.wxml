@@ -10,7 +10,7 @@
         </view>
         <view class="content">
             <image src="../../images/aboutUs/phone.png"></image>
-            <view>0919-2861222</view>
+            <view>15353837992</view>
         </view>
         <view class="content">
              <image src="../../images/aboutUs/e-mail.png"></image>
@@ -30,16 +30,20 @@
                  <view class="into">
                      <image src="../../images/find/code1.jpg"></image>
                  </view>
-                 <view class="into fonts">
-                     微信公众号
+                 <view class="scan">
+                  <view class="into fonts">
+                      关注微信公众号掌握一手政策
+                  </view>
                  </view>
               </view>
                  <view>
                      <view class="into">
                        <image src="../../images/find/code2.jpg"></image>
                       </view>
-                      <view class="into fonts">
-                          客服微信
+                      <view  class="scan">
+                        <view class="into fonts">
+                            联系园区店小二开启加速扶持
+                        </view>
                       </view>
                  </view>
              </view>

@@ -5,7 +5,7 @@
 
   <view class="news">
       <van-icon name="comment-o" />
-      <h3>领导视察</h3>  
+      <h3>各级领导视察</h3>  
   </view>
   <view class="new">
       <view wx:for="{{news}}" wx:key="index" bindtap="jump" data-id="{{index}}" >
