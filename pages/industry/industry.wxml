@@ -1,4 +1,4 @@
- <image src="../../images/1.jpg"></image>
+ <image src="../../images/1.jpg"  ></image>
  <view class="content">
     <view class="title">
         零售
@@ -8,21 +8,14 @@
  <view class="content">
     <view class="title">案例分析</view>
     <view>
-    </view>
+ </view>
  </view>
  <view class="into" >
       <view bindtap="clicks">
-         添加微信咨询 
+         详情请拨打电话
       </view>      
-      <van-dialog  id="van-dialog"
-        use-slot
-        show="{{ show }}"
-        show-cancel-button  
-        bind:close="onClose" 
-      >
-        <image src="../../images/find/code2.jpg"  class="img"/>
-      </van-dialog>
+     <van-dialog id="van-dialog" />
  </view>
- 
+   
     
       

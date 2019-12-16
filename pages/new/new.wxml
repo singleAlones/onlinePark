@@ -11,7 +11,7 @@
           <view>
               <h4>{{item.ncontent}}</h4>      
               <view >
-                  {{item.nccontent}}
+                  {{item.nccontent}} 
               </view>
             </view>
         </view>

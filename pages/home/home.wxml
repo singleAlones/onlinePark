@@ -47,43 +47,12 @@
  <!-- 精选服务 -->
  
   <view class="content">
-    <image src="../../images/service.png"></image>
- 
+    <image src="../../images/service.jpg"></image>
   </view>
   <view  class="service"> 
-        <view>
-          <image src="../../images/service/1.png"></image>
-          <view>零售电商</view>
-        </view>
-        <view>
-          <image src="../../images/service/2.png"></image>
-            <view>社交电商</view>
-        </view>
-        <view>
-          <image src="../../images/service/3.png"></image>
-            <view>直播电商</view>
-        </view>
-        <view>
-          <image src="../../images/service/4.png"></image>
-          <view>B2B电商</view>
-        </view>
-  </view>
-    <view  class="service"> 
-        <view>
-          <image src="../../images/service/5.png"></image>
-          <view>消费品</view>
-        </view>
-        <view>
-          <image src="../../images/service/6.png"></image>
-            <view>工业化工</view>
-        </view>
-        <view>
-          <image src="../../images/service/7.png"></image>
-            <view>物流仓储</view>
-        </view>
-        <view>
-          <image src="../../images/service/8.png"></image>
-          <view>现代服务</view>
+        <view wx:for="{{application}}" wx:key="index" data-id="{{index}}" bindtap="jump5">
+          <image src="{{baseUrl}}{{item.appImg}}" wx:if="{{item.appImg}}"></image>
+          <view>{{item.appName}}</view>
         </view>
   </view>
 

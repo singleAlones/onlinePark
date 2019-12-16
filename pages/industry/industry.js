@@ -7,14 +7,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show: false
+    show: false,
+    phone:'15353837992'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     
   },
 
   /**
@@ -66,22 +67,16 @@ Page({
 
   },
   clicks(){
-    Dialog.confirm({
-      title: '客服微信',
-     
-      asyncClose: true
-    })
-      .then(() => {
-        setTimeout(() => {
-          Dialog.close();
-        }, 500);
-      })
-      .catch(() => {
-        Dialog.close();
-      });
-  },
- 
-  onClose() {
-    this.setData({ close: false });
-  }
+    var that=this;
+    Dialog.alert({
+      title: '咨询电话',
+      message: that.data.phone
+    }).then(() => {
+      // on close
+    });
+
+  } 
+
+  
+  
 })

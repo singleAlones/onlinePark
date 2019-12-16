@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/industry/industry",
     "pages/home/home",
+  
     "pages/find/find",   
     "pages/merit/merit",
     "pages/companys/companys",
@@ -8,7 +10,6 @@
     "pages/introduces/introduces",
     "pages/introduce/introduce",
     "pages/advantage/advantage",
-    "pages/industry/industry",  
     "pages/garden/garden",  
     "pages/policys/policys",
     "pages/policy/policy",

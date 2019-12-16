@@ -2,10 +2,7 @@
 page{
   background:#F1F1F1;
 }
-.img{
-  width:100%;
-  height:380rpx;
-}
+ 
 
 .text{
   text-indent: 2em;

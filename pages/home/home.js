@@ -7,7 +7,8 @@ Page({
   data: {
      img:"",
      baseUrl:'',
-     index:''
+     index:'',
+     application:''
   },
 
   /**
@@ -30,6 +31,20 @@ Page({
          
         self.setData({
           img: res.data
+        })
+      }
+    });
+    //aplication
+    wx.request({
+      url: this.data.baseUrl + 'indexs/application', //home carousel
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        //   console.log(res.data );
+
+        self.setData({
+         application: res.data
         })
       }
     })
@@ -175,5 +190,15 @@ Page({
       })
       wx.navigateTo({ url: '../merit/merit' })
     }
+  },
+  jump5:function(e){
+    var index = e.currentTarget.dataset.id;
+    console.log(index);
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 500
+    })
+      wx.navigateTo({ url: '../industry/industry?index='+index })
   }
 })

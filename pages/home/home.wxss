@@ -70,28 +70,26 @@ view{
  /* service */
  .service{
    display: flex;
-   margin-bottom:10rpx;
+   flex-wrap: wrap;
  }
  .service>view {
    text-align: center;
    width:25%;
-   margin-right: 10rpx;
    background:#F9F9F9;
    border-radius:10%;
    padding-top:40rpx;
    padding-bottom: 40rpx;
    color:#24262A;
    font-size:22rpx;
+   box-sizing: border-box;
  }
  .service view image{
    width:90rpx;
    height:90rpx;
  }
  .service view view{
-   margin-top:20rpx; 
- }
-
-   
+   margin-top:15rpx; 
+ }  
   .advantage van-tab{
     font-size:28rpx;
    color:#24262A;
