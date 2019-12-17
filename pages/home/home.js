@@ -192,13 +192,13 @@ Page({
     }
   },
   jump5:function(e){
-    var index = e.currentTarget.dataset.id;
-    console.log(index);
+    var appcid = e.currentTarget.dataset.id;
+    
     wx.showToast({
       title: '加载中',
       icon: 'loading',
       duration: 500
     })
-      wx.navigateTo({ url: '../industry/industry?index='+index })
+      wx.navigateTo({ url: '../industry/industry?appcid='+appcid })
   }
 })

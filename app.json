@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/industry/industry",
     "pages/home/home",
-  
+    "pages/industry/industry",
     "pages/find/find",   
     "pages/merit/merit",
     "pages/companys/companys",

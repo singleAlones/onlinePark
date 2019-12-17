@@ -1,12 +1,23 @@
- <image src="../../images/1.jpg"  ></image>
+ <image src="{{baseUrl}}{{inc.appcimg1}}" wx:if="{{inc.appcimg1}}" ></image>
  <view class="content">
     <view class="title">
-        零售
+        {{inc.appcName}}
     </view>
-    <view class="text">面相什么服务行业</view>
  </view>
  <view class="content">
-    <view class="title">案例分析</view>
+    <view class="title" >{{industry.inName}}</view>
+    <view>
+         <view>{{industry.inName1}}</view>
+         <view>{{industry.inContent1}}</view>
+    </view>
+    <view>
+         <view>{{industry.inName2}}</view>
+         <view>{{industry.inContent2}}</view>
+    </view>
+    <view>
+         <view>{{industry.inName3}}</view>
+         <view>{{industry.inContent3}}</view>
+    </view>
     <view>
  </view>
  </view>

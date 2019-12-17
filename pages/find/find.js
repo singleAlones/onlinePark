@@ -23,6 +23,7 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl  
     })
+ 
   },
 
   /**
@@ -36,7 +37,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-     
+  
   },
 
   /**
@@ -93,7 +94,7 @@ Page({
           'content-type': 'application/json'
         }, 
         success(res) { 
-         
+            
              if(res.data.code==400){
                Toast(res.data.msg);
              }else if(res.data.code==305){
@@ -103,9 +104,20 @@ Page({
              } else if (res.data.code==200){
                Toast.success(res.data.msg);
               
-             }
+               setTimeout(function () {
+                
+                 wx.navigateTo({ url: '../find/find' })
+                 
+               }, 2000)
+              
+
+              
+              }
+        
+            
         }
       })
-    
+      
    } 
+   
 })

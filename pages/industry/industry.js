@@ -1,6 +1,6 @@
 // pages/industry/industry.js
 import Dialog from '/vant-weapp/dialog/dialog';
- 
+const app = getApp();
 Page({
 
   /**
@@ -8,14 +8,48 @@ Page({
    */
   data: {
     show: false,
-    phone:'15353837992'
+    phone:'15353837992',
+    baseUrl: '',
+    inc:'',
+    industry:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     
+    this.setData({
+      baseUrl: app.globalData.baseUrl
+    })
+    console.log(options.appcid)
+    var self = this;
+    wx.request({
+      url: this.data.baseUrl + 'indexs/application_content?appcid=' + options.appcid, //company
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log(res.data);
+        self.setData({
+         inc: res.data[0]
+        })
+      }
+    })
+
+    if (options.appcid == 3 || options.appcid == 5 || options.appcid == 6){
+      wx.request({
+        url: this.data.baseUrl + 'indexs/industry?appcid=' + options.appcid, //company
+        header: {
+          'content-type': 'application/json'
+        },
+        success(res) {
+          console.log(res.data);
+          self.setData({
+            industry: res.data[0]
+          })
+        }
+      })
+    }
   },
 
   /**
