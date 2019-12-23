@@ -1,5 +1,6 @@
 // pages/advantage/advantage.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -16,25 +17,18 @@ Page({
   onLoad: function (options) {
     this.setData({
       baseUrl: app.globalData.baseUrl
-    })
+    });
+    http.getData('indexs/advantage', this.shuffleSuc, this.fail);
+  },
+  shuffleSuc: function (res) {
     var self = this;
-    //advantage
-    wx.request({
-      url: this.data.baseUrl + 'indexs/advantage', //advantage
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-     //   console.log(res.data);
-
-        self.setData({
-          advantage: res.data
-        })
-
-      }
+    self.setData({
+      advantage: res 
     })
   },
-
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

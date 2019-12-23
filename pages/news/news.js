@@ -1,5 +1,6 @@
 // pages/news/news.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
   
   /**
@@ -19,36 +20,24 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     });
+    http.getData('indexs/news_img', this.shuffleSuc, this.fail);//news img
+    http.getData('indexs/news', this.succ, this.fail);
+  },
+  shuffleSuc: function (res) {
     var self = this;
-    wx.request({
-      url: this.data.baseUrl+'indexs/news_img', //news img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-      //  console.log(res.data);
-     
-        self.setData({
-          img: res.data
-        })
-      }
-    })
-
-    wx.request({
-      url: this.data.baseUrl + 'indexs/news', //news  
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        console.log(res.data);
-
-        self.setData({
-          news: res.data 
-        })
-      }
+    self.setData({
+      img: res
     })
   },
- 
+  succ: function (res) {
+    var self = this;
+    self.setData({
+      news: res
+    })
+  },
+  fail: function () {
+    console.log("失败")
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

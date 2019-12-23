@@ -1,6 +1,7 @@
 // pages/industry/industry.js
 import Dialog from '/vant-weapp/dialog/dialog';
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -25,50 +26,33 @@ Page({
       appcid: options.appcid
     })
     console.log(this.data.appcid)
-    var self = this;
-    wx.request({
-      url: this.data.baseUrl + 'indexs/application_content?appcid=' + options.appcid, //company
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-         
-        self.setData({
-         inc: res.data[0]
-        })
-      }
-    })
-
+    http.getData('indexs/application_content?appcid=' + options.appcid, this.shuffleSuc, this.fail);//company
     if (options.appcid == 3 || options.appcid == 5 || options.appcid == 6){
-      wx.request({
-        url: this.data.baseUrl + 'indexs/industry?appcid=' + options.appcid, //company
-        header: {
-          'content-type': 'application/json'
-        },
-        success(res) {
- 
-          self.setData({
-            industry: res.data[0]
-          })
-        }
-      })
+      http.getData('indexs/industry?appcid=' + options.appcid, this.succ, this.fail);
     }
-   
-    wx.request({
-      url: this.data.baseUrl + 'indexs/industry_content?appcid=' + options.appcid, //company
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        console.log(res.data);
-        self.setData({
-          industry_content: res.data[0]
-        })
-      }
-    })
-
+    http.getData('indexs/industry_content?appcid=' + options.appcid, this.success, this.fail);
   },
-
+    shuffleSuc: function (res) {
+      var self = this;
+      self.setData({
+        inc: res[0] 
+      })
+    },
+    succ:function(res){
+      var self = this;
+      self.setData({
+        industry: res[0]
+      })
+    },
+    success: function (res) {
+        var self = this;
+        self.setData({
+          industry_content: res[0]
+        })
+      },
+    fail: function () {
+      console.log("失败")
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

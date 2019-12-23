@@ -5,7 +5,7 @@
   </view>
   <view  wx:for="{{news}}" wx:key="index" >
         <view class="img">
-          <image src="{{baseUrl}}{{item.ncimg}}"  mode="aspectFit"></image> 
+          <image src="{{baseUrl}}{{item.ncimg}}"  wx:if="{{item.ncimg}}" mode="aspectFit"></image> 
         </view>
         <view class="content">
           <view>

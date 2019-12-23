@@ -1,5 +1,6 @@
 // pages/company/company.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -17,20 +18,17 @@ Page({
     wx.setNavigationBarTitle({ title: '企业介绍' });
     this.setData({
       baseUrl: app.globalData.baseUrl
-    })
+    });
+    http.getData('indexs/company', this.shuffleSuc, this.fail);
+  },
+  shuffleSuc: function(res) {
     var self = this;
-    wx.request({
-      url: this.data.baseUrl + 'indexs/company', //company
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-  console.log(res.data);
-        self.setData({
-          companys: res.data
-        })
-      }
+    self.setData({
+      companys: res
     })
+  },
+  fail: function () {
+    console.log("失败")
   },
 
   /**

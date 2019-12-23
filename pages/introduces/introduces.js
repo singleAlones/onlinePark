@@ -1,5 +1,6 @@
 // pages/introduce/introduce.js
 const app = getApp();
+var http = require("../../http.js"); 
 Page({
 
   /**
@@ -21,37 +22,26 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     })
-    var self = this;
-    // 大图背景
-     
-    wx.request({
-      url: this.data.baseUrl + 'indexs/big_img', //news img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        // console.log(res.data);
-        self.setData({
-          img: res.data[4].biimg
-        })
-      }
-    })
+       // 大图背景
+    http.getData('indexs/big_img', this.shuffleSuc, this.fail);
     //introduce
-    wx.request({
-      url: this.data.baseUrl + 'indexs/introduce', //news img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-    //    console.log(res.data);
-        
-        self.setData({
-          introduce: res.data
-        })
-     
-    //   console.log(self.data.introduces)
-      }
+    http.getData('indexs/introduce', this.succ, this.fail);//news img
+  
+  },
+  shuffleSuc: function (res) {
+    var self = this;
+    self.setData({
+      img: res[4].biimg
     })
+  },
+  succ: function (res) {
+    var self = this;
+    self.setData({
+      introduce: res 
+    })
+  },
+  fail: function () {
+    console.log("失败")
   },
 
   /**

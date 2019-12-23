@@ -1,5 +1,6 @@
 // pages/new/new.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -18,22 +19,17 @@ Page({
       baseUrl: app.globalData.baseUrl
     })
     var self = this;
-    wx.request({
-      url: this.data.baseUrl +'indexs/new_content?ncid='+options.ncid, //new_content  
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-       console.log(res.data)
-
-        self.setData({
-          news: res.data
-        })
-      }
-    })
-
+    http.getData('indexs/new_content?ncid=' + options.ncid, this.shuffleSuc, this.fail);//news img       
   },
-
+  shuffleSuc: function (res) {
+    var self = this;
+    self.setData({
+      news: res
+    })
+  },
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

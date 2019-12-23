@@ -1,5 +1,6 @@
 // pages/policy/policy.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -17,22 +18,17 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     });
+    http.getData('indexs/policy', this.shuffleSuc, this.fail);//news img
+  },
+  shuffleSuc: function (res) {
     var self = this;
-    wx.request({
-      url: this.data.baseUrl + 'indexs/policy', //policy
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-     //   console.log(res.data);
-
-        self.setData({
-          img: res.data
-        })
-      }
+    self.setData({
+      img: res
     })
   },
-
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

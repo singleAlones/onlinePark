@@ -1,5 +1,7 @@
 // pages/home/home.js
 const app = getApp();
+var http = require("../../http.js");
+
 Page({
   /**
    * 页面的初始数据
@@ -17,40 +19,27 @@ Page({
   onLoad: function (options) {
     this.setData({
       baseUrl: app.globalData.baseUrl
-    })
-   
-    var self = this;
- 
-    wx.request({
-      url: this.data.baseUrl+'indexs/i_carousel', //home carousel
-      header: {
-        'content-type': 'application/json'
-      }, 
-      success(res) { 
-     //   console.log(res.data );
-         
-        self.setData({
-          img: res.data
-        })
-      }
-    });
-    //aplication
-    wx.request({
-      url: this.data.baseUrl + 'indexs/application', //home carousel
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        //   console.log(res.data );
-
-        self.setData({
-         application: res.data
-        })
-      }
-    })
-     
+    })  
+    //carousel
+    http.getData('indexs/i_carousel', this.shuffleSuc, this.fail);
+    //application
+    http.getData('indexs/application',this.succ,this.fail) 
   },
-
+  shuffleSuc:function(res){
+    var self = this;
+    self.setData({
+      img: res
+    })
+  },
+  succ:function(res){
+    var self = this;
+    self.setData({
+      application: res
+    })
+  },
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -193,7 +182,6 @@ Page({
   },
   jump5:function(e){
     var appcid = e.currentTarget.dataset.id;
-    
     wx.showToast({
       title: '加载中',
       icon: 'loading',

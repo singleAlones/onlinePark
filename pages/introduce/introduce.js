@@ -1,5 +1,6 @@
 // pages/introduce/introduce.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -19,22 +20,16 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     })
+    http.getData('indexs/introduce_content?incid=' + options.incid, this.shuffleSuc, this.fail);//introduce_content
+  },
+  shuffleSuc: function (res) {
     var self = this;
-     
-
-    wx.request({
-      url: this.data.baseUrl + 'indexs/introduce_content?incid='+options.incid, //introduce_content
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-     //   console.log(res.data);
-        self.setData({
-          introduces: res.data[0]
-        })
-      }
+    self.setData({
+      introduces: res[0]
     })
-    
+  },
+  fail: function () {
+    console.log("失败")
   },
 
   /**

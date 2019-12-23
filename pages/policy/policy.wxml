@@ -1,5 +1,5 @@
 <!--pages/policy/policy.wxml-->
-  <image src="{{baseUrl}}{{img}}" class="img"></image>
+  <image src="{{baseUrl}}{{img}}" class="img" wx-if="{{img}}"></image>
 <view class="policy">
 
   <view class="text">

@@ -1,5 +1,6 @@
 // pages/merit/merit.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -19,40 +20,24 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     })
+    http.getData('indexs/merit1', this.shuffleSuc, this.fail);
+    http.getData('indexs/merit2', this.succ, this.fail);
+  },
+  shuffleSuc: function (res) {
     var self = this;
-    wx.request({
-      url: this.data.baseUrl + 'indexs/merit1', //news img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-          console.log(res.data);
-
-        self.setData({
-          merit1: res.data
-        })
-
-      
-      }
-    });
-
-    wx.request({
-      url: this.data.baseUrl + 'indexs/merit2', //news img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        console.log(res.data);
-
-        self.setData({
-          merit2: res.data
-        })
-
-
-      }
+    self.setData({
+      merit1: res
     })
   },
-
+  succ: function (res) {
+    var self = this;
+    self.setData({
+      merit2: res 
+    })
+  },
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

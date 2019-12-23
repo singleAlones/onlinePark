@@ -1,5 +1,6 @@
 // pages/policy/policy.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -18,36 +19,25 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     })
+    http.getData('indexs/policy_content?pocid=' + options.pocid, this.shuffleSuc, this.fail);//new_content  
+    http.getData('indexs/big_img', this.succ, this.fail);//big_img
+  },
+  shuffleSuc: function (res) {
     var self = this;
-    wx.request({
-      url: this.data.baseUrl + 'indexs/policy_content?pocid=' + options.pocid, //new_content  
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-     // console.log(res.data)
-
-        self.setData({
-         policys: res.data
-        })
-      }
-    })
-
-    wx.request({
-      url: this.data.baseUrl + 'indexs/big_img', //big_img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        console.log(res.data);
-
-        self.setData({
-          img: res.data[1].biimg
-        })
-      }
+    self.setData({
+      policys: res 
     })
   },
-
+  succ: function (res) {
+    var self = this;
+    console.log(res)
+    self.setData({
+      img: res[1].biimg
+    })
+  },
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

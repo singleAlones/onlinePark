@@ -1,5 +1,6 @@
 // pages/aboutUs/aboutUs.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -16,25 +17,19 @@ Page({
   onLoad: function (options) {
     this.setData({
       baseUrl: app.globalData.baseUrl,
-
     });
-    var self = this;
-    wx.request({
-      url: this.data.baseUrl+'indexs/big_img', //big_img
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-      //  console.log(res.data);
-
-        self.setData({
-          img: res.data[0].biimg
-        })
-      }
-    })
-
+    http.getData('indexs/big_img', this.shuffleSuc, this.fail);//big_img
   },
-
+  shuffleSuc: function(res) {
+    console.log(res)
+    var self = this;
+    self.setData({
+      img: res[0].biimg
+    })
+  },
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

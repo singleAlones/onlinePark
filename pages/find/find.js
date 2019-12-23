@@ -1,6 +1,6 @@
 // pages/find/find.js
 const app = getApp();
- 
+var http = require("../../http.js"); 
 import Toast from '/vant-weapp/toast/toast';
 Page({
 
@@ -88,36 +88,24 @@ Page({
       var hname=this.data.hname;
       var hphone=this.data.hphone;
       var that = this;
-      wx.request({
-        url: this.data.baseUrl + 'users/user?hname='+hname+"&&hphone="+hphone,
-        header: {
-          'content-type': 'application/json'
-        }, 
-        success(res) { 
-            
-             if(res.data.code==400){
-               Toast(res.data.msg);
-             }else if(res.data.code==305){
-               Toast(res.data.msg);
-             } else if (res.data.code == 301) {
-               Toast.fail(res.data.msg);
-             } else if (res.data.code==200){
-               Toast.success(res.data.msg);
-              
-               setTimeout(function () {
-                
-                 wx.navigateTo({ url: '../find/find' })
-                 
-               }, 2000)
-              
-
-              
-              }
-        
-            
-        }
-      })
-      
-   } 
-   
+     http.getData('users/user?hname=' + hname + "&&hphone=" + hphone, this.shuffleSuc, this.fail);    
+   }, 
+  shuffleSuc: function (res) {
+    var self = this;
+    if (res.code == 400) {
+      Toast(res.msg);
+    } else if (res.code == 305) {
+      Toast(res.msg);
+    } else if (res.code == 301) {
+      Toast.fail(res.data.msg);
+    } else if (res.code == 200) {
+      Toast.success(res.msg);
+      setTimeout(function () {
+        wx.navigateTo({ url: '../find/find' })
+      }, 2000)
+    }
+  },
+  fail: function () {
+    console.log("失败")
+  },
 })

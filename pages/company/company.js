@@ -1,5 +1,6 @@
 // pages/company/company.js
 const app = getApp();
+var http = require("../../http.js");
 Page({
 
   /**
@@ -17,22 +18,19 @@ Page({
     this.setData({
       baseUrl: app.globalData.baseUrl
     })
-    console.log(options.comcid)
+   // console.log(options.comcid)
+    http.getData('indexs/company_content?comcid=' + options.comcid, this.shuffleSuc, this.fail);
+  
+  },
+  shuffleSuc: function(res) {
     var self = this;
-    wx.request({
-      url: this.data.baseUrl + 'indexs/company_content?comcid=' + options.comcid, //company
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-      console.log(res.data);
-        self.setData({
-         company: res.data
-        })
-      }
+    self.setData({
+      company: res
     })
   },
-
+  fail: function () {
+    console.log("失败")
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
