@@ -54,3 +54,16 @@ van-button {
   width: 100%;
   text-align: center;
 }
+.content1 image{
+  margin-top: 20rpx;
+}
+.title2{
+  font-weight: bold;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.text1{
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  text-indent: 2em;
+}

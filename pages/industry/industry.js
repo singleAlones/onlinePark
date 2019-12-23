@@ -11,7 +11,9 @@ Page({
     phone:'15353837992',
     baseUrl: '',
     inc:'',
-    industry:''
+    industry:'',
+    appcid:'',
+    industry_content:''
   },
 
   /**
@@ -19,9 +21,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      baseUrl: app.globalData.baseUrl
+      baseUrl: app.globalData.baseUrl,
+      appcid: options.appcid
     })
-    console.log(options.appcid)
+    console.log(this.data.appcid)
     var self = this;
     wx.request({
       url: this.data.baseUrl + 'indexs/application_content?appcid=' + options.appcid, //company
@@ -29,7 +32,7 @@ Page({
         'content-type': 'application/json'
       },
       success(res) {
-        console.log(res.data);
+         
         self.setData({
          inc: res.data[0]
         })
@@ -43,13 +46,27 @@ Page({
           'content-type': 'application/json'
         },
         success(res) {
-          console.log(res.data);
+ 
           self.setData({
             industry: res.data[0]
           })
         }
       })
     }
+   
+    wx.request({
+      url: this.data.baseUrl + 'indexs/industry_content?appcid=' + options.appcid, //company
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log(res.data);
+        self.setData({
+          industry_content: res.data[0]
+        })
+      }
+    })
+
   },
 
   /**

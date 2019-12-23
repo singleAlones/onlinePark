@@ -34,7 +34,7 @@
     </view>
    <view bindtap="jump3">
          <image src="../../images/tabbar/garden.png"></image> 
-        <view>我要入园</view>
+        <view>入园指南</view>
     </view>
    
     <view bindtap="jump4">
@@ -50,10 +50,12 @@
     <image src="../../images/service.jpg"></image>
   </view>
   <view  class="service"> 
+     
         <view wx:for="{{application}}" wx:key="index" data-id="{{index}}" bindtap="jump5">
           <image src="{{baseUrl}}{{item.appImg}}" wx:if="{{item.appImg}}"></image>
           <view>{{item.appName}}</view>
         </view>
+ 
   </view>
 
  

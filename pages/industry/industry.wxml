@@ -4,22 +4,29 @@
         {{inc.appcName}}
     </view>
  </view>
- <view class="content">
+ <view class="content" wx:if="{{appcid==3||appcid==5||appcid==6}}">
     <view class="title" >{{industry.inName}}</view>
     <view>
-         <view>{{industry.inName1}}</view>
-         <view>{{industry.inContent1}}</view>
+         <view class="title2">{{industry.inName1}}</view>
+         <view class="text1">{{industry.inContent1}}</view>
     </view>
     <view>
-         <view>{{industry.inName2}}</view>
-         <view>{{industry.inContent2}}</view>
+         <view class="title2">{{industry.inName2}}</view>
+         <view class="text1">{{industry.inContent2}}</view>
     </view>
     <view>
-         <view>{{industry.inName3}}</view>
-         <view>{{industry.inContent3}}</view>
+         <view  class="title2" wx-if="{{industry.inName3}}">{{industry.inName3}}</view>
+         <view  class="text1" wx-if="{{industry.inContent3}}">{{industry.inContent3}}</view>
     </view>
     <view>
  </view>
+ </view>
+ <view class="content1">
+       <view >
+          <image src="{{baseUrl}}{{industry_content.indimg1}}" wx:if="{{industry_content.indimg1}}"></image>
+          <image src="{{baseUrl}}{{industry_content.indimg2}}" wx:if="{{industry_content.indimg2}}"></image>
+          <image src="{{baseUrl}}{{industry_content.indimg3}}" wx:if="{{industry_content.indimg3}}"></image>
+       </view>
  </view>
  <view class="into" >
       <view bindtap="clicks">

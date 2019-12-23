@@ -71,17 +71,20 @@ view{
  .service{
    display: flex;
    flex-wrap: wrap;
+   justify-content: center
  }
  .service>view {
    text-align: center;
-   width:25%;
+   width:22%;
    background:#F9F9F9;
    border-radius:10%;
-   padding-top:40rpx;
-   padding-bottom: 40rpx;
+   padding-top:30rpx;
+   padding-bottom: 30rpx;
+   margin-right: 13rpx;
    color:#24262A;
    font-size:22rpx;
    box-sizing: border-box;
+   margin-bottom: 13rpx;
  }
  .service view image{
    width:90rpx;
