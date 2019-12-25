@@ -1,14 +1,9 @@
- 
- 
-
-  <view class="bg"  >
-     
+  <view class="bg"  >     
         <view class="into">
             <text>
             入驻资料填写
             </text>
-        </view>
-       
+        </view>       
             <view class="into"> 
               <input placeholder="请输入姓名" value="{{uname}}" name="uname" bindinput ="userNameInput"></input> 
             </view>

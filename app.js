@@ -37,6 +37,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl:'http://192.168.101.55:3000/'
+    baseUrl:'https://www.centurywealth.cn:443/'
   }
 })
