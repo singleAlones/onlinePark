@@ -92,12 +92,15 @@ Page({
    }, 
   shuffleSuc: function (res) {
     var self = this;
+    
     if (res.code == 400) {
       Toast(res.msg);
     } else if (res.code == 305) {
       Toast(res.msg);
     } else if (res.code == 301) {
-      Toast.fail(res.data.msg);
+      Toast.fail(res.msg);
+    }else if(res.code==300){
+      Toast(res.msg);
     } else if (res.code == 200) {
       Toast.success(res.msg);
       setTimeout(function () {

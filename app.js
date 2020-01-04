@@ -37,6 +37,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl:'https://www.centurywealth.cn:443/'
+    baseUrl:'https://www.centurywealth.cn/'
   }
 })
